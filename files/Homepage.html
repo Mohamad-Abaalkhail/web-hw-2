@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./csspage.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/89d199d159.js" crossorigin="anonymous">
+    </script>
+    <style>
+        .hvr-float-shadow {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            position: relative;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+        }
+
+        .hvr-float-shadow:before {
+            pointer-events: none;
+            position: absolute;
+            z-index: -1;
+            content: '';
+            top: 100%;
+            left: 5%;
+            height: 10px;
+            width: 90%;
+            opacity: 0;
+            background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform, opacity;
+            transition-property: transform, opacity;
+        }
+
+        .hvr-float-shadow:hover,
+        .hvr-float-shadow:focus,
+        .hvr-float-shadow:active {
+            -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+        }
+
+        .hvr-float-shadow:hover:before,
+        .hvr-float-shadow:focus:before,
+        .hvr-float-shadow:active:before {
+            opacity: 1;
+            -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+        }
+
+        footer {
+            background-color: #343a40;
+            height: 50px;
+        }
+
+        .fa {
+            margin-left: 600px;
+            font-size: 50px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+        <a href="./Homepage.html" class="w3-bar-item w3-button">Home</a>
+        <a href="#" class="w3-bar-item w3-button">Comedis</a>
+        <a href="#" class="w3-bar-item w3-button">Drama</a>
+        <a href="#" class="w3-bar-item w3-button">action</a>
+        <a href="#" class="w3-bar-item w3-button">horror</a>
+
+        <a href="Homepage.html">
+            <button>sign in</button>
+        </a>
+    </div>
+
+    <div id="main">
+
+        <div class="w3-teal">
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <div class="w3-container">
+                <h1>My Page</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
+
+
+
+
+    </div>
+    <p class="headding">Top Movies</p>
+    <span>
+        <a href="./Annable.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/Annable.jpg">
+
+        </a>
+        <a href="./Rings.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/rings.jpg">
+        </a>
+        <a href="./ipman.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/ipman4.jpg">
+        </a>
+        <a href="bossbaby.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/BossBaby.jpg">
+        </a>
+        <a href="./imlegend.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/Imlegend.jpg">
+        </a>
+        <a href="jumanji.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/Jumanji.jpg">
+        </a>
+        <a href="starwars.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/StarWars.jpg">
+        </a>
+    </span>
+    <p class="headding">Top TV Shows</p>
+    <span>
+        <a href="./lusifer.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/lucifer.jpg">
+        </a>
+        <a href="Angle.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/Angle.jpg">
+        </a>
+        <a href="breakingbad.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/Breakingbad.jpg">
+        </a>
+        <a href="clonewars.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/Clonewars.jpg">
+        </a>
+        <a href="Friends.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/Friends.jpg">
+        </a>
+        <a href="Lost.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/Lost.jpg">
+        </a>
+        <a href="strangerthings.html" class="hvr-float-shadow">
+            <img :hover class="img" src="./img/Strangerthinges.jpg">
+        </a>
+    </span>
+    <footer>
+        <a href="" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/joincoded" class="fa fa-twitter"></a>
+    </footer>
+</body>
+
+</html>
